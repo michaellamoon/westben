@@ -21,10 +21,13 @@
   },
   "homepage": "https://github.com/michaellamoon/westben#readme",
   "dependencies": {
+    "@tensorflow-models/handpose": "^0.0.7",
+    "@tensorflow/tfjs": "^3.8.0",
     "body-parser": "^1.19.0",
     "concurrently": "^6.2.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "nodemon": "^2.0.12"
+    "nodemon": "^2.0.12",
+    "react-webcam": "^5.2.4"
   }
 }

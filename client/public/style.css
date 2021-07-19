@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Kavivanar&display=swap');
+span{
+  font-family: 'Kavivanar', cursive;
+  color: black;
+  font-size: 2.5vw;
+
+  position: absolute;
+  text-align: center;
+  margin-top: -15%;
+  margin-left: 45%;
+}
