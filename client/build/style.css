@@ -4,8 +4,68 @@ span{
   color: black;
   font-size: 2.5vw;
 
-  position: absolute;
   text-align: center;
-  margin-top: -15%;
-  margin-left: 45%;
+  margin-top: -50%;
+}
+
+.tracking {
+  position: absolute;
+  margin-left: 50%;
+  z-index: -1;
+}
+
+.butt{
+  background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+
+  font-size: 4px;
+}
+
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.9);
+  z-index: 2;
+  cursor: pointer;
+}
+
+#text{
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  font-size: 3vw;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+
+#player2{
+  position: absolute;
+  margin-left: -100%;
+}
+#player3{
+  position: absolute;
+  margin-left: -100%;
+}
+#player4{
+  position: absolute;
+  margin-left: -100%;
+}
+#player5{
+  position: absolute;
+  margin-left: -100%;
+}
+#player6{
+  position: absolute;
+  margin-left: -100%;
 }

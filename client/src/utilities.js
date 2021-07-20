@@ -81,6 +81,7 @@ export const drawHand = (predictions, ctx) => {
         }
       }
 
+//------------------------------------------------------------------------------
 
 
 //------------------------------------------------------------------------------
@@ -89,44 +90,142 @@ let pinkyDown = false;
 let ringDown = false;
 let midDown = false;
 let indexDown = false;
-
+let thumbup = false;
 
       //pinky down
       if( landmarks[20][1] > landmarks[17][1]){
-        document.getElementById("gesture").innerHTML = "pinky down!";
+        //document.getElementById("gesture").innerHTML = "pinky down!";
         pinkyDown = true;
       }
       //ring down
       if( landmarks[16][1] > landmarks[13][1]){
-        document.getElementById("gesture").innerHTML = "ring down!";
+        //document.getElementById("gesture").innerHTML = "ring down!";
         ringDown = true;
       }
       //mid down
       if( landmarks[12][1] > landmarks[9][1]){
-        document.getElementById("gesture").innerHTML = "middle down!";
+        //document.getElementById("gesture").innerHTML = "middle down!";
         midDown = true;
       }
       //index down
       if( landmarks[8][1] > landmarks[5][1]){
-        document.getElementById("gesture").innerHTML = "index down!";
+        //document.getElementById("gesture").innerHTML = "index down!";
         indexDown = true;
       }
-      /*L thumb down
-      if( landmarks[4][0] > landmarks[1][0]){
-        document.getElementById("gesture").innerHTML = "thumb down!";
-      }
-      */
 
 
-if (pinkyDown && ringDown && midDown && indexDown){
-  document.getElementById("gesture").innerHTML = "THUMBS UP!";
-}
 if (!pinkyDown && !ringDown && !midDown && !indexDown){
-  document.getElementById("gesture").innerHTML = "HIGH FIVE!";
+  document.getElementById("gesture").innerHTML = "A-1";
+    //PLAY PAIR
+    document.getElementById("playA").click();
+    document.getElementById("playB").click();
+    //PAUSE OTHERS
+    document.getElementById("pauseC").click();   document.getElementById("player3").style.opacity = "0";
+    document.getElementById("pauseD").click();   document.getElementById("player4").style.opacity = "0";
+    document.getElementById("pauseE").click();   document.getElementById("player5").style.opacity = "0";
+    document.getElementById("pauseF").click();   document.getElementById("player6").style.opacity = "0";
+//VOL + OPACITY---------
+  document.getElementById("volupA").click();
+  document.getElementById("player1").style.opacity = "0.9";
+  document.getElementById("voldownB").click();
+  document.getElementById("player2").style.opacity = "0.3";
 }
-if (!pinkyDown && ringDown && midDown && !indexDown){
-  document.getElementById("gesture").innerHTML = "ROCK ON!";
+if (pinkyDown && ringDown && midDown && indexDown){
+  if( landmarks[5][1] > landmarks[0][1]){
+    document.getElementById("gesture").innerHTML = "A-2";
+      //PLAY PAIR
+      document.getElementById("playA").click();
+      document.getElementById("playB").click();
+      //PAUSE OTHERS
+      document.getElementById("pauseC").click();   document.getElementById("player3").style.opacity = "0";
+      document.getElementById("pauseD").click();   document.getElementById("player4").style.opacity = "0";
+      document.getElementById("pauseE").click();   document.getElementById("player5").style.opacity = "0";
+      document.getElementById("pauseF").click();   document.getElementById("player6").style.opacity = "0";
+//VOL + OPACITY---------
+    document.getElementById("volupB").click();
+    document.getElementById("player2").style.opacity = "0.7";
+    document.getElementById("voldownA").click();
+    document.getElementById("player1").style.opacity = "0.4";
+  }
+
+
+
+
+  if( landmarks[0][1] > landmarks[5][1]){
+    document.getElementById("gesture").innerHTML = "B-3";
+      //PLAY PAIR
+      document.getElementById("playC").click();
+      document.getElementById("playD").click();
+      //PAUSE OTHERS
+      document.getElementById("pauseA").click();   document.getElementById("player1").style.opacity = "0";
+      document.getElementById("pauseB").click();   document.getElementById("player2").style.opacity = "0";
+      document.getElementById("pauseE").click();   document.getElementById("player5").style.opacity = "0";
+      document.getElementById("pauseF").click();   document.getElementById("player6").style.opacity = "0";
+//VOL + OPACITY---------
+    document.getElementById("volupC").click();
+    document.getElementById("player3").style.opacity = "0.9";
+    document.getElementById("voldownD").click();
+    document.getElementById("player4").style.opacity = "0.3";
+  }
 }
+if (!pinkyDown && ringDown && midDown && indexDown){
+  document.getElementById("gesture").innerHTML = "B-4";
+    //PLAY PAIR
+    document.getElementById("playC").click();
+    document.getElementById("playD").click();
+    //PAUSE OTHERS
+    document.getElementById("pauseA").click();   document.getElementById("player1").style.opacity = "0";
+    document.getElementById("pauseB").click();   document.getElementById("player2").style.opacity = "0";
+    document.getElementById("pauseE").click();   document.getElementById("player5").style.opacity = "0";
+    document.getElementById("pauseF").click();   document.getElementById("player6").style.opacity = "0";
+//VOL + OPACITY---------
+  document.getElementById("volupD").click();
+  document.getElementById("player4").style.opacity = "0.6";
+  document.getElementById("voldownC").click();
+  document.getElementById("player3").style.opacity = "0.5";
+}
+
+
+
+
+
+if (!pinkyDown && !ringDown && midDown && !indexDown){
+  document.getElementById("gesture").innerHTML = "C-5";
+
+    //PLAY PAIR
+    document.getElementById("playE").click();
+    document.getElementById("playF").click();
+    //PAUSE OTHERS
+    document.getElementById("pauseA").click();   document.getElementById("player1").style.opacity = "0";
+    document.getElementById("pauseB").click();   document.getElementById("player2").style.opacity = "0";
+    document.getElementById("pauseC").click();   document.getElementById("player3").style.opacity = "0";
+    document.getElementById("pauseD").click();   document.getElementById("player4").style.opacity = "0";
+//VOL + OPACITY---------
+  document.getElementById("volupE").click();
+  document.getElementById("player5").style.opacity = "0.6";
+  document.getElementById("voldownF").click();
+  document.getElementById("player6").style.opacity = "0.5";
+
+}
+if (pinkyDown && ringDown && midDown && !indexDown){
+  document.getElementById("gesture").innerHTML = "C-6";
+    //PLAY PAIR
+    document.getElementById("playE").click();
+    document.getElementById("playF").click();
+    //PAUSE OTHERS
+    document.getElementById("pauseA").click();   document.getElementById("player1").style.opacity = "0";
+    document.getElementById("pauseB").click();   document.getElementById("player2").style.opacity = "0";
+    document.getElementById("pauseC").click();   document.getElementById("player3").style.opacity = "0";
+    document.getElementById("pauseD").click();   document.getElementById("player4").style.opacity = "0";
+//VOL + OPACITY---------
+  document.getElementById("volupF").click();
+  document.getElementById("player6").style.opacity = "0.6";
+  document.getElementById("voldownE").click();
+  document.getElementById("player5").style.opacity = "0.5";
+}
+
+
+
     });
   }
 };

@@ -7,13 +7,180 @@
     <meta name="theme-color" content="#000000" />
 
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
     <link rel="stylesheet" href="./style.css">
     <title>Westben's Starfruit</title>
   </head>
-  <body>
+  <body onload="on()">
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <span id=gesture> text </span>
+    <!--INSTRUCTIONS POP UP  -->
+    <div id="overlay" onclick="off()">
+      <div id="text"><b>Westben Performer-Composer Residency's STARFRUIT</b>
+        <br><br><small><i>click anywere to start the experience</div>
+    </div>
 
+    <!--TRACKING LAYER -->
+    <div class="tracking">
+      <div id="root"></div>
+      <span id=gesture> text </span>
+    </div>
+
+    <!--VIDEO LAYER -->
+    <div class="btn-group">
+      <button id="playA" type="button" class="butt">PlayA</button>
+      <button id="pauseA" type="button" class="butt">PauseA</button>
+      <button id="volupA" type="button" class="butt">Vol UpA</button>
+      <button id="voldownA" type="button" class="butt">Vol DownA</button>
+
+      <button id="playB" type="button" class="butt">PlayB</button>
+      <button id="pauseB" type="button" class="butt">PauseB</button>
+      <button id="volupB" type="button" class="butt">Vol UpB</button>
+      <button id="voldownB" type="button" class="butt">Vol DownB</button>
+
+      <button id="playC" type="button" class="butt">PlayC</button>
+      <button id="pauseC" type="button" class="butt">PauseC</button>
+      <button id="volupC" type="button" class="butt">Vol UpC</button>
+      <button id="voldownC" type="button" class="butt">Vol DownC</button>
+
+      <button id="playD" type="button" class="butt">PlayD</button>
+      <button id="pauseD" type="button" class="butt">PauseD</button>
+      <button id="volupD" type="button" class="butt">Vol UpD</button>
+      <button id="voldownD" type="button" class="butt">Vol DownD</button>
+
+      <button id="playE" type="button" class="butt">PlayE</button>
+      <button id="pauseE" type="button" class="butt">PauseE</button>
+      <button id="volupE" type="button" class="butt">Vol UpE</button>
+      <button id="voldownE" type="button" class="butt">Vol DownE</button>
+
+      <button id="playF" type="button" class="butt">PlayF</button>
+      <button id="pauseF" type="button" class="butt">PauseF</button>
+      <button id="volupF" type="button" class="butt">Vol UpF</button>
+      <button id="voldownF" type="button" class="butt">Vol DownF</button>
+    </div>
+    </div>
+    <div id="player1"></div>
+    <div id="player2"></div>
+    <div id="player3"></div>
+    <div id="player4"></div>
+    <div id="player5"></div>
+    <div id="player6"></div>
+
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+  <script>
+      function on() {document.getElementById("overlay").style.display = "block";}
+      function off() {document.getElementById("overlay").style.display = "none";}
+
+      var tag = document.createElement('script');
+     tag.src = "//www.youtube.com/iframe_api";
+     var firstScriptTag = document.getElementsByTagName('script')[0];
+     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+     var player1, player2,  player3, player4,   player5, player6;
+
+     function onYouTubeIframeAPIReady() {
+         player1 = new YT.Player('player1', {
+           width: "100%",
+           height: "1000px",
+            videoId: 'D1IeDyG-pgM',
+         });
+         player2 = new YT.Player('player2', {
+           width: "100%",
+           height: "1000px",
+            videoId: '1UHmQANFtNs',
+         });
+
+         player3 = new YT.Player('player3', {
+           width: "100%",
+           height: "1000px",
+            videoId: 'KJ5UazhKXC8',
+         });
+         player4 = new YT.Player('player4', {
+           width: "100%",
+           height: "1000px",
+            videoId: '7NOSDKb0HlU',
+         });
+
+         player5 = new YT.Player('player5', {
+           width: "100%",
+           height: "1000px",
+            videoId: 'TruH3-jkCmY',
+         });
+         player6 = new YT.Player('player6', {
+           width: "100%",
+           height: "1000px",
+            videoId: 'lSzb6a0PkQU',
+         });
+
+     }
+//video A-1 -------------------------------
+     $('#playA').click(function(){ player1.playVideo(); });
+     $('#pauseA').click(function(){ player1.pauseVideo(); });
+     $('#volupA').click(function(){
+       var volume1 = player1.getVolume();
+       if (volume1 <= 95) {player1.setVolume(volume1 + 5); }
+     });
+     $('#voldownA').click(function(){
+       var volume1 = player1.getVolume();
+       if (volume1 > 5){player1.setVolume(volume1 - 5);}
+     });
+//video A-2 -------------------------------
+     $('#playB').click(function(){ player2.playVideo(); });
+     $('#pauseB').click(function(){ player2.pauseVideo(); });
+     $('#volupB').click(function(){
+       var volume2 = player2.getVolume();
+       if (volume2 <= 95){player2.setVolume(volume2 + 5);}
+     });
+     $('#voldownB').click(function(){
+       var volume2 = player2.getVolume();
+       if (volume2 > 5){player2.setVolume(volume2 - 5);}
+     });
+//video B-1 -------------------------------
+    $('#playC').click(function(){ player3.playVideo(); });
+    $('#pauseC').click(function(){ player3.pauseVideo(); });
+    $('#volupC').click(function(){
+      var volume3 = player3.getVolume();
+      if (volume3 <= 95) {player3.setVolume(volume3 + 5); }
+      });
+    $('#voldownC').click(function(){
+      var volume3 = player3.getVolume();
+      if (volume3 > 5){player3.setVolume(volume3 - 5);}
+    });
+ //video B-2 -------------------------------
+    $('#playD').click(function(){ player4.playVideo(); });
+    $('#pauseD').click(function(){ player4.pauseVideo(); });
+    $('#volupD').click(function(){
+      var volume4 = player4.getVolume();
+      if (volume4 <= 95){player4.setVolume(volume4 + 5);}
+      });
+    $('#voldownD').click(function(){
+      var volume4 = player4.getVolume();
+      if (volume4 > 5){player4.setVolume(volume4 - 5);}
+    });
+//video C-1 -------------------------------
+    $('#playE').click(function(){ player5.playVideo(); });
+    $('#pauseE').click(function(){ player5.pauseVideo(); });
+    $('#volupE').click(function(){
+      var volume5 = player5.getVolume();
+      if (volume5 <= 95) {player5.setVolume(volume5 + 5); }
+      });
+    $('#voldownE').click(function(){
+      var volume5 = player5.getVolume();
+      if (volume5 > 5){player5.setVolume(volume5 - 5);}
+    });
+ //video C-2 -------------------------------
+    $('#playF').click(function(){ player6.playVideo(); });
+    $('#pauseF').click(function(){ player6.pauseVideo(); });
+    $('#volupF').click(function(){
+      var volume6 = player6.getVolume();
+      if (volume6 <= 95){player6.setVolume(volume6 + 5);}
+    });
+    $('#voldownF').click(function(){
+      var volume6 = player6.getVolume();
+      if (volume6 > 5){player6.setVolume(volume6 - 5);}
+    });
+
+  </script>
   </body>
 </html>
