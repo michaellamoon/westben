@@ -1,6 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Kavivanar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
+body{
+  font-family: 'Roboto Mono', monospace;
+}
 span{
-  font-family: 'Kavivanar', cursive;
+  font-family: 'Roboto Mono', monospace;
   color: black;
   font-size: 2.5vw;
 
@@ -41,12 +44,18 @@ span{
 
 #text{
   position: absolute;
-  top: 20%;
-  left: 10%;
-  font-size: 3vw;
-  color: #ECAA96; //pink
+  top: 4%;
+  left: 7%;
+  right: 7%;
 }
-
+/*----------------*/
+#title{  font-size: 7vw;   color: #ECAA96; //pink line-height: -3vw; letter-spacing:-0.8vw; }
+.hilight{font-size: 1.5vw;    color: #5FA332; //green }
+p{       font-size: 1vw;  color: #ECAA96; //pink  }
+#howto{  text-align: right; font-size: 2vw;    color: #5FA332; //green}
+#guide{  text-align: right; font-size: 1vw;  color: #5FA332; //green }
+#gest{   font-size: 1vw;  color: #5FA332; //green font-style: italic;}
+/*------------------*/
 #player2{
   position: absolute;
   margin-left: -100%;
