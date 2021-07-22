@@ -69,3 +69,14 @@ span{
   position: absolute;
   margin-left: -100%;
 }
+
+
+.rectangle {
+  height: auto;
+  width: 80%;
+  background-color: grey;
+  opacity: 95%;
+
+  margin-left: 10%;
+  margin-top: -5%;
+}
