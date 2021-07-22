@@ -115,7 +115,7 @@ let thumbup = false;
 
 
 if (!pinkyDown && !ringDown && !midDown && !indexDown){
-  document.getElementById("gesture").innerHTML = "A-1";
+  //document.getElementById("gesture").innerHTML = "A-1";
     //PLAY PAIR
     document.getElementById("playA").click();
     document.getElementById("playB").click();
@@ -132,7 +132,7 @@ if (!pinkyDown && !ringDown && !midDown && !indexDown){
 }
 if (pinkyDown && ringDown && midDown && indexDown){
   if( landmarks[5][1] > landmarks[0][1]){
-    document.getElementById("gesture").innerHTML = "A-2";
+    //document.getElementById("gesture").innerHTML = "A-2";
       //PLAY PAIR
       document.getElementById("playA").click();
       document.getElementById("playB").click();
@@ -152,7 +152,7 @@ if (pinkyDown && ringDown && midDown && indexDown){
 
 
   if( landmarks[0][1] > landmarks[5][1]){
-    document.getElementById("gesture").innerHTML = "B-3";
+  //  document.getElementById("gesture").innerHTML = "B-3";
       //PLAY PAIR
       document.getElementById("playC").click();
       document.getElementById("playD").click();
@@ -169,7 +169,7 @@ if (pinkyDown && ringDown && midDown && indexDown){
   }
 }
 if (!pinkyDown && ringDown && midDown && indexDown){
-  document.getElementById("gesture").innerHTML = "B-4";
+  //document.getElementById("gesture").innerHTML = "B-4";
     //PLAY PAIR
     document.getElementById("playC").click();
     document.getElementById("playD").click();
@@ -190,7 +190,7 @@ if (!pinkyDown && ringDown && midDown && indexDown){
 
 
 if (!pinkyDown && !ringDown && midDown && !indexDown){
-  document.getElementById("gesture").innerHTML = "C-5";
+//  document.getElementById("gesture").innerHTML = "C-5";
 
     //PLAY PAIR
     document.getElementById("playE").click();
@@ -208,7 +208,7 @@ if (!pinkyDown && !ringDown && midDown && !indexDown){
 
 }
 if (pinkyDown && ringDown && midDown && !indexDown){
-  document.getElementById("gesture").innerHTML = "C-6";
+  //document.getElementById("gesture").innerHTML = "C-6";
     //PLAY PAIR
     document.getElementById("playE").click();
     document.getElementById("playF").click();
