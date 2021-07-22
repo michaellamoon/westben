@@ -49,10 +49,10 @@ span{
   right: 7%;
 }
 /*----------------*/
-#title{  font-size: 7vw;   color: #ECAA96; //pink line-height: -3vw; letter-spacing:-0.8vw; }
-.hilight{font-size: 1.5vw;    color: #5FA332; //green }
+#title{  font-size: 6.5vw;   color: #ECAA96; //pink line-height: -3vw; letter-spacing:-0.8vw; }
+.hilight{font-size: 1.3vw;    color: #5FA332; //green }
 p{       font-size: 1vw;  color: #ECAA96; //pink  }
-#howto{  text-align: right; font-size: 2vw;    color: #5FA332; //green}
+#howto{  text-align: right; font-size: 1.5vw;    color: #5FA332; //green}
 #guide{  text-align: right; font-size: 1vw;  color: #5FA332; //green }
 #gest{   font-size: 1vw;  color: #5FA332; //green font-style: italic;}
 /*------------------*/
