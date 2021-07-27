@@ -115,6 +115,7 @@ let thumbup = false;
 
 
 if (!pinkyDown && !ringDown && !midDown && !indexDown){
+      document.getElementById("loader").hidden = true;
   //document.getElementById("gesture").innerHTML = "A-1";
     //PLAY PAIR
     document.getElementById("playA").click();
@@ -132,6 +133,7 @@ if (!pinkyDown && !ringDown && !midDown && !indexDown){
 }
 if (pinkyDown && ringDown && midDown && indexDown){
   if( landmarks[5][1] > landmarks[0][1]){
+        document.getElementById("loader").hidden = true;
     //document.getElementById("gesture").innerHTML = "A-2";
       //PLAY PAIR
       document.getElementById("playA").click();
@@ -152,6 +154,7 @@ if (pinkyDown && ringDown && midDown && indexDown){
 
 
   if( landmarks[0][1] > landmarks[5][1]){
+        document.getElementById("loader").hidden = true;
   //  document.getElementById("gesture").innerHTML = "B-3";
       //PLAY PAIR
       document.getElementById("playC").click();
@@ -169,6 +172,7 @@ if (pinkyDown && ringDown && midDown && indexDown){
   }
 }
 if (!pinkyDown && ringDown && midDown && indexDown){
+      document.getElementById("loader").hidden = true;
   //document.getElementById("gesture").innerHTML = "B-4";
     //PLAY PAIR
     document.getElementById("playC").click();
@@ -190,6 +194,7 @@ if (!pinkyDown && ringDown && midDown && indexDown){
 
 
 if (!pinkyDown && !ringDown && midDown && !indexDown){
+      document.getElementById("loader").hidden = true;
 //  document.getElementById("gesture").innerHTML = "C-5";
 
     //PLAY PAIR
@@ -208,6 +213,7 @@ if (!pinkyDown && !ringDown && midDown && !indexDown){
 
 }
 if (pinkyDown && ringDown && midDown && !indexDown){
+      document.getElementById("loader").hidden = true;
   //document.getElementById("gesture").innerHTML = "C-6";
     //PLAY PAIR
     document.getElementById("playE").click();

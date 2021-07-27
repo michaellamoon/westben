@@ -38,7 +38,7 @@ span{
   right: 0;
   bottom: 0;
   background-color: rgba(39,29,48,1);
-  z-index: 2;
+  z-index: 3;
   cursor: pointer;
 }
 
@@ -55,6 +55,25 @@ p{       font-size: 1vw;  color: #ECAA96; //pink  }
 #howto{  text-align: right; font-size: 1.5vw;    color: #5FA332; //green}
 #guide{  text-align: right; font-size: 1vw;  color: #5FA332; //green }
 #gest{   font-size: 1vw;  color: #5FA332; //green font-style: italic;}
+/*------------------*/
+#loader {
+  border: 6vw solid #f3f3f3; /* Light grey */
+  border-top: 4vw solid #271D30; /* purple */
+  border-radius: 50%;
+  width: 30vw;
+  height: 30vw;
+  animation: spin 2s linear infinite;
+
+  position: absolute;
+  z-index: 1;
+  margin-left: 35%;
+  margin-top: -80%;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 /*------------------*/
 #player1{
   margin-top: -2vw;
