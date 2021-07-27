@@ -64,10 +64,10 @@ p{       font-size: 1vw;  color: #ECAA96; //pink  }
   height: 30vw;
   animation: spin 2s linear infinite;
 
-  position: absolute;
-  z-index: 1;
-  margin-left: 35%;
-  margin-top: -80%;
+  position: relative;
+  z-index: 2;
+  margin-left: 35vw;
+  margin-top: -45vw;
 }
 
 @keyframes spin {
